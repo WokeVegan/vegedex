@@ -1,55 +1,58 @@
+
+<!doctype html>
 {% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{% static 'images/icon.png' %}" >
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>{% block title %}{% endblock %} | Vegedex</title>
+</head>
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>{% block title %}{% endblock %} • Vegedex </title>
-    <meta name="description" content="A set of tools made for Old School Runescape." />
-    <link rel="shortcut icon" href="{% static 'images/icon.png' %}" />
-    <!-- Pico.css -->
+<body class="bg-slate-800">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
-  </head>
-
-  <body>
-    <!-- Nav -->
-    <nav id="navbar" class="container-fluid">
-      <ul>
-        <li>
-          <a href="/" class="contrast" ><strong>Vegedex</strong></a>
-        </li>
-      </ul>
-      <ul>
+<div class="bg-slate-800 px-6 py-8 ring-1 ring-slate-900/5 shadow-xl text-white mt-5 text-base font-medium tracking-tight">
+    <h2 class="text-slate-300"><a href="/">Vegedex</a></h2>
+    <nav class="text-slate-400">
+        <ul>
         <li>
         <details role="list" dir="rtl">
           <summary aria-haspopup="listbox" role="link" class="secondary">Account</summary>
           <ul role="menu">
             <li><a href="/login">Login</a></li>
             <li><a href="/register">Register</a></li>
+            <li><a href="/settings">Settings</a></li>
           </ul>
         </details>
         </li>
       </ul>
     </nav>
-    <!-- ./ Nav -->
-  <main class="container center">
-    {% block content %}{% endblock %}
-  </main>
-  </body>
+</div>
+<div class="text-white">
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
 
-<footer>
-    <div class="">
-      <span class="">© 2023 <a href="https://www.Vegedex.app/" class="hover:underline">Vegedex™</a>. All Rights Reserved.</span>
+<footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
+    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://www.Vegedex.app/" class="hover:underline">Vegedex™</a>. All Rights Reserved.
+    </span>
+    <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+        <li>
+            <a href="https://discord.gg/34PBC433n9" class="mr-4 hover:underline md:mr-6 ">Discord</a>
+        </li>
+        <li>
+            <a href="https://github.com/WokeVegan/vegedex" class="mr-4 hover:underline md:mr-6">Github</a>
+        </li>
+        <li>
+            <a href="mailto:contact@vegedex.app?subject=Vegedex%20support" class="hover:underline">Contact</a>
+        </li>
+
+    </ul>
     </div>
-    <div>
-        <ul>
-            <li><a href="https://discord.gg/34PBC433n9" class="">Discord</a></li>
-            <li><a href="https://github.com/WokeVegan/vegedex" class="">Github</a></li>
-            <li><a href="mailto:contact@vegedex.app?subject=Vegedex%20support" class="hover:underline">Contact</a></li>
-        </ul>
-    </div>
+
 </footer>
 
 </html>
