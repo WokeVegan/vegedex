@@ -203,10 +203,7 @@ cython_debug/
 # .idea/modules
 # *.iml
 # *.ipr
-<<<<<<< HEAD
 
-=======
->>>>>>> fe0958a (removed Procfile)
 # CMake
 cmake-build-*/
 
@@ -241,13 +238,7 @@ fabric.properties
 .idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
-<<<<<<< HEAD
 .idea/caches/build_file_checksums.ser
-=======
-.idea/caches/build_file_checksums.ser
-
-.idea/
 
 */__pycache__/*
 /vegedex/__pycache__/
->>>>>>> fe0958a (removed Procfile)

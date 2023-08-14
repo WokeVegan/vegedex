@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>{% block title %}{% endblock %} | Vegedex</title>
+</head>
+
+<body class="bg-slate-800">
+
+<div class="bg-slate-700 px-6 py-8 ring-1 ring-slate-900/5 shadow-xl text-white mt-5 text-base font-medium tracking-tight">
+    <h2 class="text-slate-900 ">Vegedex.app</h2>
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
+
+<footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
+    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://www.Vegedex.app/" class="hover:underline">Vegedex™</a>. All Rights Reserved.
+    </span>
+    <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+        <li>
+            <a href="https://discord.gg/34PBC433n9" class="mr-4 hover:underline md:mr-6 ">Discord</a>
+        </li>
+        <li>
+            <a href="https://github.com/WokeVegan/vegedex" class="mr-4 hover:underline md:mr-6">Github</a>
+        </li>
+        <li>
+            <a href="mailto:contact@vegedex.app?subject=Vegedex%20support" class="hover:underline">Contact</a>
+        </li>
+
+    </ul>
+    </div>
+</footer>
+
+</html>
