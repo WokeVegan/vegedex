@@ -1,0 +1,62 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+  <!-- Main -->
+  <main class="container">
+      <article class="grid">
+        <div>
+          <form>
+            <input
+              type="text"
+              name="username"
+              placeholder="Username"
+              aria-label="Username"
+              autocomplete="nickname"
+              required
+            />
+            <input
+              type="text"
+              name="email"
+              placeholder="Email"
+              aria-label="Email"
+              autocomplete="email"
+              required
+            />
+          <form>
+          <div class="grid">
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              aria-label="Password"
+              autocomplete="current-password"
+              required
+            />
+            <input
+              type="password"
+              name="password"
+              placeholder="Confirm"
+              aria-label="Password"
+              autocomplete="current-password"
+              required
+            />
+          </div>
+
+          <fieldset>
+            <label for="terms">
+              <input type="checkbox" role="switch" id="terms" name="terms" />
+              I agree to the <a href="#" onclick="event.preventDefault()">Privacy Policy</a>
+            </label>
+          </fieldset>
+            <button type="submit" class="contrast" onclick="event.preventDefault()">Create Account</button>
+          </form>
+          </form>
+        </div>
+
+      </article>
+    </main>
+    <!-- ./ Main -->
+
+{% endblock %}
