@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
@@ -51,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'corsheaders.middleware.CorsMiddleware'
 ]
 
 ROOT_URLCONF = 'vegedex.urls'
@@ -142,3 +144,8 @@ EMAIL_FROM = os.environ['SMTP_EMAIL']
 EMAIL_HOST_USER = os.environ['SMTP_EMAIL']
 EMAIL_HOST_PASSWORD = os.environ['SMTP_PASSWORD']
 EMAIL_PORT = 587
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://vegedex.app",
+    "https://*.vegedex.app"
+]

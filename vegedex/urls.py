@@ -29,3 +29,4 @@ urlpatterns = [
 ]
 
 handler404 = views.handler404
+handler403 = views.handler403

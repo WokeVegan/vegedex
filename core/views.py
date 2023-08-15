@@ -71,3 +71,7 @@ def home(request):
 
 def handler404(request, exception):
     return render(request, 'core/404.html')
+
+
+def handler403(request, exception):
+    return render(request, 'core/403.html')
